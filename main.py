@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 
 # Load the model
-model = joblib.load(r'C:\Users\errav\Downloads\flipkart_intern\logistic_regression.pkl')
+model = joblib.load(r"C:\Users\Public\flipkart_intern\logistic_regression.pkl")
 
 # Function to classify sentiment
 def classify_sentiment(review):
