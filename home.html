@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis of Flipkart brands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e1e; /* Dark background color */
+            color: #fff; /* Text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 500px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            background: #333; /* Dark container background color */
+        }
+
+        h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for a radium effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Background color for the header */
+    padding: 10px 0; /* Add padding to the header */
+    text-align: center; /* Center align the text */
+    z-index: 999; /* Ensure the header is above other content */
+    overflow:visible; /* Hide overflow to enable left-to-right scroll */
+    white-space: nowrap; /* Prevent wrapping of text */
+    animation: marquee 10s linear infinite; /* Apply animation for left-to-right scroll */
+}
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(35%);
+    }
+    100% {
+        transform: translateX(-35%);
+    }
+}
+
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #444; /* Dark input background color */
+            color: #fff; /* Input text color */
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #ff416c, #ff4b2b); /* Gradient background color */
+            color: #fff; /* Button text color */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis</h1>
+    <form action="/analyze" method="post">
+        <label for="review">Enter your review:</label><br>
+        <textarea id="review" name="review" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
